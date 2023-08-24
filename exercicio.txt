@@ -1,0 +1,309 @@
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git clone https://github.com/professorbossini/20232_fatec_ipi_poo_git_intro.git .       
+Cloning into '.'...
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (15/15), done.
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git remote
+origin
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git remote -v
+origin  https://github.com/professorbossini/20232_fatec_ipi_poo_git_intro.git (fetch)
+nF@github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git                                                                   linker script   
+origin  https://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@github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git (fetch)     
+origin  https://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@github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git (push)      
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -v
+On branch main                                                                                                                 o nome ou, se 
+Your branch is up to date with 'origin/main'.
+
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status   
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log -- pretty=oneline
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log-- pretty=oneline 
+git: 'log--' is not a git command. See 'git --help'.
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log --pretty=oneline 
+a92aedad28e7e70dadd1548214e2aec0f551d1c6 (HEAD -> main, origin/main, origin/HEAD) .gitignore
+a95ddedcdad658e158bfa0a22aadc6e4eda7b138 (tag: v1.1.0) ap01(git): subtracao testada
+7e6f598e2c8b0f7f1159bd60113b3e61e24de7b9 ap01(git): subtracao implementadafwafwafwfwafweaff
+c4bb12fc27c1d7d580012937589805e0840396e9 ap01(git): subtracao implementada
+5e03ae947f2d1dbd013abda98aa93c7f0a1cb918 (tag: v1.0.0) ap01(git): teste soma ok
+6caf3c9a2c8ebc4388d352440c04852fc100a9fe ap01(git): soma implementada
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log
+commit a92aedad28e7e70dadd1548214e2aec0f551d1c6 (HEAD -> main, origin/main, origin/HEAD)
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+ M calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git add .\calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+M  calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log
+Author: Rodrigo Bossini <professorbossini@gmail.com>
+Date:   Thu Aug 17 18:01:52 2023 -0300
+
+    .gitignore
+
+commit a95ddedcdad658e158bfa0a22aadc6e4eda7b138 (tag: v1.1.0)
+Author: Rodrigo Bossini <professorbossini@gmail.com>
+Date:   Thu Aug 17 17:45:53 2023 -0300
+
+    ap01(git): subtracao testada
+
+commit 7e6f598e2c8b0f7f1159bd60113b3e61e24de7b9
+Author: Rodrigo Bossini <professorbossini@gmail.com>
+Date:   Thu Aug 17 17:32:39 2023 -0300
+ Committer: Aluno <aluno@IPIRANGA.FATEC>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2>
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 8 threads
+Total 21 (delta 3), reused 16 (delta 1), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git
+ * [new branch]      main -> main
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   teste_calculadora.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git add teste_calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   teste_calculadora.py
+
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git commit -a -m "ap01(git): multiplicacao testada"
+[main 15c8190] ap01(git): multiplicacao testada
+ Committer: Aluno <aluno@IPIRANGA.FATEC>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git
+   016e4be..15c8190  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+ M calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git add calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s
+ Committer: Aluno <aluno@IPIRANGA.FATEC>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git config --local user.name "João Gabriel"
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git config --local user.email jgabriel.ferreira20@gmail.com
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git show
+Author: Aluno <aluno@IPIRANGA.FATEC>
+Date:   Thu Aug 24 16:10:58 2023 -0300
+
+    ap01(git): divisao implementada
+
+diff --git a/calculadora.py b/calculadora.py
+index acea2b4..f413606 100644
+--- a/calculadora.py
++++ b/calculadora.py
+@@ -6,4 +6,7 @@ def subtracao(a, b):
+   return a - b
+
+ def multiplicacao(a,b):
+-  return a * b
+\ No newline at end of file
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log --pretty
+Author: Aluno <aluno@IPIRANGA.FATEC>
+    ap01(git): divisao implementada
+commit 15c81904e6b9eb6b02c46788656d912f591db93e (origin/main, origin/HEAD)
+Author: Aluno <aluno@IPIRANGA.FATEC>
+
+    ap01(git): multiplicacao testada
+
+commit 016e4bee2f9f024fa1dc56617984755449dc7c46
+Author: Aluno <aluno@IPIRANGA.FATEC>
+Date:   Thu Aug 24 15:51:47 2023 -0300
+
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status -s   
+ M teste_calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git add teste_calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git commit
+[main f510b13] ap01(git): divisao testada
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log --pretty=oneline    
+f510b13bdc62c4024b86aabc4a3d9d13eabb9418 (HEAD -> main) ap01(git): divisao testada
+eaf76e5737bd9a35c536f560f2e6f9ab195cca1a ap01(git): divisao implementada
+15c81904e6b9eb6b02c46788656d912f591db93e (origin/main, origin/HEAD) ap01(git): multiplicacao testada
+016e4bee2f9f024fa1dc56617984755449dc7c46 ap01(git): multiplicacao implementada
+a92aedad28e7e70dadd1548214e2aec0f551d1c6 .gitignore
+a95ddedcdad658e158bfa0a22aadc6e4eda7b138 (tag: v1.1.0) ap01(git): subtracao testada
+c4bb12fc27c1d7d580012937589805e0840396e9 ap01(git): subtracao implementada
+5e03ae947f2d1dbd013abda98aa93c7f0a1cb918 (tag: v1.0.0) ap01(git): teste soma ok
+6caf3c9a2c8ebc4388d352440c04852fc100a9fe ap01(git): soma implementada
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git tag -a v1.2.0 15c81904e6b9eb6b02c46788656d912f591db93e
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log --pretty=oneline
+eaf76e5737bd9a35c536f560f2e6f9ab195cca1a ap01(git): divisao implementada
+15c81904e6b9eb6b02c46788656d912f591db93e (tag: v1.2.0, origin/main, origin/HEAD) ap01(git): multiplicacao testada
+016e4bee2f9f024fa1dc56617984755449dc7c46 ap01(git): multiplicacao implementada
+a92aedad28e7e70dadd1548214e2aec0f551d1c6 .gitignore
+a95ddedcdad658e158bfa0a22aadc6e4eda7b138 (tag: v1.1.0) ap01(git): subtracao testada
+7e6f598e2c8b0f7f1159bd60113b3e61e24de7b9 ap01(git): subtracao implementadafwafwafwfwafweaff
+c4bb12fc27c1d7d580012937589805e0840396e9 ap01(git): subtracao implementada
+5e03ae947f2d1dbd013abda98aa93c7f0a1cb918 (tag: v1.0.0) ap01(git): teste soma ok
+6caf3c9a2c8ebc4388d352440c04852fc100a9fe ap01(git): soma implementada
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 663 bytes | 663.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git
+   15c8190..f510b13  main -> main
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log    
+Author: João Gabriel <jgabriel.ferreira20@gmail.com>
+Date:   Thu Aug 24 16:17:19 2023 -0300
+
+    ap01(git): divisao testada
+
+commit eaf76e5737bd9a35c536f560f2e6f9ab195cca1a
+Author: Aluno <aluno@IPIRANGA.FATEC>
+Date:   Thu Aug 24 16:10:58 2023 -0300
+
+    ap01(git): divisao implementada
+
+commit 15c81904e6b9eb6b02c46788656d912f591db93e (tag: v1.2.0)
+Author: Aluno <aluno@IPIRANGA.FATEC>
+Date:   Thu Aug 24 16:04:50 2023 -0300
+
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git show v1.2.0
+Tagger: João Gabriel <jgabriel.ferreira20@gmail.com>
+Date:   Thu Aug 24 16:21:25 2023 -0300
+
+multiplicacao testada e implementada
+
+commit 15c81904e6b9eb6b02c46788656d912f591db93e (tag: v1.2.0)
+Author: Aluno <aluno@IPIRANGA.FATEC>
+Date:   Thu Aug 24 16:04:50 2023 -0300
+
+    ap01(git): multiplicacao testada
+index 9368a8a..c5e80e2 100644
+--- a/teste_calculadora.py
++++ b/teste_calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git log --pretty=oneline
+eaf76e5737bd9a35c536f560f2e6f9ab195cca1a ap01(git): divisao implementada
+15c81904e6b9eb6b02c46788656d912f591db93e (tag: v1.2.0) ap01(git): multiplicacao testada
+016e4bee2f9f024fa1dc56617984755449dc7c46 ap01(git): multiplicacao implementada
+a92aedad28e7e70dadd1548214e2aec0f551d1c6 .gitignore
+a95ddedcdad658e158bfa0a22aadc6e4eda7b138 (tag: v1.1.0) ap01(git): subtracao testada
+7e6f598e2c8b0f7f1159bd60113b3e61e24de7b9 ap01(git): subtracao implementadafwafwafwfwafweaff
+c4bb12fc27c1d7d580012937589805e0840396e9 ap01(git): subtracao implementada
+5e03ae947f2d1dbd013abda98aa93c7f0a1cb918 (tag: v1.0.0) ap01(git): teste soma ok
+6caf3c9a2c8ebc4388d352440c04852fc100a9fe ap01(git): soma implementada
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git tag -a v1.3.0 f510b13bdc62c4024b86aabc4a3d9d13eabb9418 
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git show v1.3.0
+Tagger: João Gabriel <jgabriel.ferreira20@gmail.com>
+
+divisao testada e implementada
+
+commit f510b13bdc62c4024b86aabc4a3d9d13eabb9418 (HEAD -> main, tag: v1.3.0, origin/main, origin/HEAD)
+Author: João Gabriel <jgabriel.ferreira20@gmail.com>
+Date:   Thu Aug 24 16:17:19 2023 -0300
+
+    ap01(git): divisao testada
+
+diff --git a/teste_calculadora.py b/teste_calculadora.py
+index c5e80e2..412a6c8 100644
+--- a/teste_calculadora.py
++++ b/teste_calculadora.py
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push
+Everything up-to-date
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git show
+Author: João Gabriel <jgabriel.ferreira20@gmail.com>
+Date:   Thu Aug 24 16:17:19 2023 -0300
+
+    ap01(git): divisao testada
+diff --git a/teste_calculadora.py b/teste_calculadora.py
+index c5e80e2..412a6c8 100644
+--- a/teste_calculadora.py
++++ b/teste_calculadora.py
+@@ -3,4 +3,6 @@ print(calculadora.soma(1, 2))
+ print(calculadora.subtracao(1, 2))
+
+-print(calculadora.multiplicacao(2,2))
+\ No newline at end of file
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git tag     
+v1.0.0
+v1.1.0
+v1.2.0
+v1.3.0
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push tag
+fatal: 'tag' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push origin --tags
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 646 bytes | 646.00 KiB/s, done.
+Total 4 (delta 0), reused 2 (delta 0), pack-reused 0
+To https://github.com/JgabrielHub/Fatec_Poo_introducao_git_clone.git
+ * [new tag]         v1.0.0 -> v1.0.0
+ * [new tag]         v1.1.0 -> v1.1.0
+ * [new tag]         v1.2.0 -> v1.2.0
+ * [new tag]         v1.3.0 -> v1.3.0
+PS C:\Users\aluno\Documents\Dev\introducao_git_clone2> git push tag
